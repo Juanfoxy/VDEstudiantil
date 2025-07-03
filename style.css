@@ -12,8 +12,8 @@ html {
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background-color: #FFDDF4; /* Pastel Pink */
-    color: #333;
+    background-color: #F0F8FF; /* Alice Blue */
+    color: #333333; /* Dark Gray */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -24,9 +24,9 @@ body {
 
 /* Focus style for accessibility */
 a:focus, button:focus, [tabindex]:not([tabindex="-1"]):focus {
-    outline: 2px solid #8A2BE2; /* Blue Violet outline */
+    outline: 2px solid #FFD700; /* Gold */
     outline-offset: 2px;
-    box-shadow: 0 0 0 4px rgba(138, 43, 226, 0.3); /* Subtle outer glow */
+    box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.3); /* Gold shadow */
 }
 
 /* Simple background bubble animation */
@@ -39,7 +39,7 @@ body::before {
     height: 40vw;
     max-width: 300px;
     max-height: 300px;
-    background-color: rgba(255, 182, 193, 0.2);
+    background-color: rgba(173, 216, 230, 0.2); /* Light Blue tint */
     border-radius: 50%;
     transform: translate(-50%, -50%);
     animation: moveBubbles 25s infinite ease-in-out alternate;
@@ -56,7 +56,7 @@ body::after {
     height: 20vw;
     max-width: 150px;
     max-height: 150px;
-    background-color: rgba(221, 160, 221, 0.2);
+    background-color: rgba(128, 128, 128, 0.15); /* Gray tint */
     border-radius: 50%;
     transform: translate(-50%, -50%);
     animation: moveBubbles 35s infinite ease-in-out alternate-reverse;
@@ -75,10 +75,9 @@ body::after {
     }
 }
 
-
 header {
-    background-color: #FFC0CB;
-    color: #fff;
+    background-color: #000080; /* Navy */
+    color: #FFFFFF; /* White */
     padding: 1rem 0;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -92,7 +91,7 @@ header {
 header h1 {
     margin-bottom: 0.5rem;
     font-size: 2.5rem;
-    color: #8A2BE2;
+    color: #FFFFFF; /* White */
 }
 
 nav ul {
@@ -103,12 +102,12 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 20px; /* This will be overridden for .has-submenu on mobile */
+    margin-right: 20px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #F0F0F0; /* Off-White */
     font-weight: bold;
     padding: 8px 15px;
     border-radius: 20px;
@@ -119,10 +118,10 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.active {
-    background-color: #FFB6C1;
-    color: #8A2BE2;
+    background-color: #ADD8E6; /* Light Blue */
+    color: #000080; /* Navy */
     transform: scale(1.08) translateY(-2px);
-    box-shadow: 0 4px 8px rgba(138, 43, 226, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 128, 0.3); /* Navy shadow */
 }
 
 main {
@@ -130,24 +129,24 @@ main {
     padding: 20px;
     max-width: 850px;
     margin: 20px auto;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #FFFFFF; /* Solid White */
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0,0,0,0.08);
     position: relative;
     z-index: 1;
 }
 
-main h2 { /* General H2 styling within main, will be overridden by .text-center h2 */
-    color: #8A2BE2;
+main h2 {
+    color: #000080; /* Navy */
     margin-bottom: 1rem;
     text-align: center;
     font-size: 2rem;
 }
 
-main p { /* General P styling within main, will be overridden by .text-center p */
+main p {
     margin-bottom: 1em;
     font-size: 1.05em;
-    color: #483D8B;
+    color: #333333; /* Dark Gray */
 }
 
 main ul {
@@ -157,14 +156,14 @@ main ul {
 }
 
 main ul li {
-    margin-bottom: 0.5em; /* This will be overridden for .submenu li */
-    color: #483D8B;
+    margin-bottom: 0.5em;
+    color: #333333; /* Dark Gray */
     font-size: 1em;
 }
 
 .competencia-proyecto {
-    background-color: #FFFAFD;
-    border: 1px solid #FFC0CB;
+    background-color: #E6E6FA; /* Lavender */
+    border: 1px solid #B0C4DE; /* Light Steel Blue */
     padding: 20px 25px;
     margin: 25px auto;
     border-radius: 25px;
@@ -184,29 +183,27 @@ main ul li {
     transform: translateY(0);
 }
 
-
 .competencia-contenido {
     flex: 2;
 }
 
-.competencia-imagen-placeholder { /* This is for proyectos.html, .media-placeholder is for fase pages */
+.competencia-imagen-placeholder {
     flex: 1;
-    background-color: #F0F8FF;
-    border: 2px dashed #B0C4DE;
+    background-color: #E0E0E0; /* Light Gray placeholder bg */
+    border: 2px dashed #A9A9A9; /* Dark Gray dashed border */
     border-radius: 15px;
     min-height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #708090;
+    color: #666666; /* Medium Gray text */
     font-size: 0.9em;
     padding: 10px;
 }
 
-
 .competencia-proyecto h3 {
-    color: #8A2BE2;
+    color: #000080; /* Navy */
     margin-bottom: 0.75em;
     font-size: 1.5em;
 }
@@ -217,23 +214,22 @@ main ul li {
 }
 
 .competencia-proyecto h4 {
-    color: #DA70D6;
+    color: #000080; /* Navy */
     margin-top: 1em;
     margin-bottom: 0.5em;
     font-size: 1.2em;
-    border-bottom: 1px dashed #FFD1DC;
+    border-bottom: 1px dashed #ADD8E6; /* Light Blue */
     padding-bottom: 0.3em;
 }
 
-main h2 span[role="img"] { /* For emojis in general H2s */
+main h2 span[role="img"] {
     font-size: 0.8em;
     vertical-align: middle;
 }
 
-/* Hero Section Styling (index.html) */
 .hero-section {
-    background-color: #FFB6C1;
-    color: #fff;
+    background-color: #B0C4DE; /* Light Steel Blue */
+    color: #000080; /* Navy text */
     padding: 40px 20px;
     text-align: center;
     border-radius: 0 0 30px 30px;
@@ -241,8 +237,8 @@ main h2 span[role="img"] { /* For emojis in general H2s */
     position: relative;
 }
 
-.hero-section h2 { /* Overrides main h2 for hero */
-    color: #fff;
+.hero-section h2 {
+    color: #000080; /* Navy text */
     font-size: 2.8em;
     margin-bottom: 0.5em;
 }
@@ -251,37 +247,36 @@ main h2 span[role="img"] { /* For emojis in general H2s */
     font-size: 0.8em;
 }
 
-.hero-section p { /* Overrides main p for hero */
+.hero-section p {
     font-size: 1.2em;
-    color: #fff;
+    color: #000080; /* Navy text */
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0;
 }
 
-.content-section { /* For content below hero on index.html */
+.content-section {
     padding-top: 20px;
 }
 
 .content-section h3 {
-    color: #8A2BE2;
+    color: #000080; /* Navy */
     font-size: 1.8em;
     margin-bottom: 1em;
     text-align: center;
 }
 
-
 footer {
-    background-color: #F8BBD0;
-    color: #444;
+    background-color: #000080; /* Navy */
+    color: #F0F0F0; /* Off-White text */
     text-align: center;
     padding: 1.5rem 0;
     margin-top: auto;
     font-size: 0.9rem;
     position: relative;
     z-index: 10;
-    border-top: 1px solid #FFC0CB;
+    border-top: 1px solid #B0C4DE; /* Light Steel Blue border */
 }
 
 footer p {
@@ -289,7 +284,7 @@ footer p {
 }
 
 footer a {
-    color: #8A2BE2;
+    color: #ADD8E6; /* Light Blue links */
     text-decoration: none;
 }
 
@@ -301,73 +296,62 @@ footer p a[aria-label*="placeholder"] {
     display: inline-block;
     padding: 5px 8px;
     margin: 0 5px;
-    border: 1px solid #FFB6C1;
+    border: 1px solid #ADD8E6; /* Light Blue border */
     border-radius: 5px;
-    color: #8A2BE2;
+    color: #ADD8E6; /* Light Blue text */
     font-weight: bold;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 footer p a[aria-label*="placeholder"]:hover {
-    background-color: #8A2BE2;
-    color: #fff;
+    background-color: #FFD700; /* Gold hover bg */
+    color: #000080; /* Navy text on gold hover */
     text-decoration: none;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     body {
         padding-top: 160px;
     }
-
     header h1 {
         font-size: 2rem;
     }
-
     nav ul li {
         display: block;
         margin-right: 0;
         margin-bottom: 10px;
     }
-
     nav ul li:last-child {
         margin-bottom: 0;
     }
-
     nav ul li a {
         display: block;
         padding: 10px 15px;
     }
-
     nav ul li a:hover,
     nav ul li a.active {
         transform: scale(1.03) translateY(-1px);
     }
-
     main {
         margin: 10px;
         padding: 15px;
         max-width: 100%;
     }
-
     .competencia-proyecto {
         flex-direction: column;
         align-items: center;
         border-radius: 20px;
     }
-
     .competencia-contenido {
         flex-basis: auto;
         width: 100%;
     }
-
     .competencia-imagen-placeholder {
         flex-basis: auto;
         width: 80%;
         min-height: 120px;
         margin-top: 15px;
     }
-
     body::before, body::after {
         width: 60vw;
         height: 60vw;
@@ -378,31 +362,26 @@ footer p a[aria-label*="placeholder"]:hover {
         height: 30vw;
         filter: blur(30px);
     }
-
     .hero-section {
         padding: 30px 15px;
         margin: -15px -15px 20px -15px;
         border-radius: 0 0 20px 20px;
     }
-
     .hero-section h2 {
         font-size: 2.2em;
     }
-
     .hero-section p {
         font-size: 1.1em;
     }
-
     footer {
         padding: 1rem 0;
     }
 }
 
-/* --- Page Banner Styling (Inside <main> on each page) --- */
 .page-banner-area {
     width: 100%;
     margin-bottom: 25px;
-    background-color: #F8F9FA;
+    background-color: #E6E6FA; /* Lavender */
     border-radius: 8px;
     overflow: hidden;
 }
@@ -414,7 +393,6 @@ footer p a[aria-label*="placeholder"]:hover {
     margin: 0 auto;
 }
 
-/* --- Dropdown Submenu Styling --- */
 nav ul li.has-submenu {
     position: relative;
 }
@@ -432,8 +410,8 @@ nav ul li.has-submenu > a::after {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #FFB6C1;
-    border: 1px solid #FFC0CB;
+    background-color: #000050; /* Darker Navy for dropdown */
+    border: 1px solid #B0C4DE; /* Light Steel Blue */
     border-top: none;
     border-radius: 0 0 8px 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
@@ -458,7 +436,7 @@ nav ul li.has-submenu:focus-within > .submenu {
 .submenu li a {
     display: block;
     padding: 10px 15px;
-    color: #8A2BE2;
+    color: #F0F0F0; /* Off-White */
     text-decoration: none;
     white-space: nowrap;
     font-weight: normal;
@@ -468,8 +446,8 @@ nav ul li.has-submenu:focus-within > .submenu {
 }
 
 .submenu li a:hover {
-    background-color: #8A2BE2;
-    color: #fff;
+    background-color: #ADD8E6; /* Light Blue */
+    color: #000080; /* Navy */
 }
 
 @media (max-width: 768px) {
@@ -480,34 +458,30 @@ nav ul li.has-submenu:focus-within > .submenu {
     nav ul li.has-submenu:last-child {
         margin-bottom: 0;
     }
-
     nav ul li.has-submenu > a::after {
         display: inline-block;
     }
-
     .submenu {
         position: static;
         transform: none;
         width: auto;
         box-shadow: none;
         border-radius: 0;
-        border-left: 2px solid #8A2BE2;
+        border-left: 2px solid #ADD8E6; /* Light Blue */
         border-right: none;
         border-bottom: none;
-        border-top: 1px solid #FFC0CB;
+        border-top: 1px solid #B0C4DE; /* Light Steel Blue */
         margin-top: 8px;
         margin-left: 15px;
         margin-right: 0;
-        background-color: rgba(255,182,193,0.3);
+        background-color: rgba(0,0,128,0.1); /* Navy tint */
     }
-
     .submenu li a {
         padding: 8px 15px;
         padding-left: 20px;
     }
 }
 
-/* --- Phase Page Content Styling --- */
 .page-content {
     padding: 10px 0;
 }
@@ -516,20 +490,20 @@ nav ul li.has-submenu:focus-within > .submenu {
     text-align: center;
 }
 
-.text-center h2 { /* Overrides main h2 and hero h2 for phase pages */
+.text-center h2 {
     margin-bottom: 0.75em;
     font-size: 2.2em;
-    color: #7B1FA2;
+    color: #000080; /* Navy */
 }
 
-.text-center p { /* Overrides main p and hero p for phase pages */
+.text-center p {
     max-width: 650px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1.5em;
     font-size: 1.1em;
     line-height: 1.7;
-    color: #483D8B; /* Ensure it uses the standard text color if not inheriting */
+    color: #333333; /* Dark Gray */
 }
 
 .media-placeholder {
@@ -538,25 +512,20 @@ nav ul li.has-submenu:focus-within > .submenu {
     width: 80%;
     max-width: 500px;
     min-height: 200px;
-    background-color: #E8EAF6;
-    border: 2px dashed #9FA8DA;
+    background-color: #E0E0E0; /* Light Gray placeholder bg */
+    border: 2px dashed #A9A9A9; /* Dark Gray dashed border */
     border-radius: 8px;
-    display: flex; /* Using flex to center text content within placeholder */
+    display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center; /* Fallback for text centering if flex not supported or for inline content */
-    color: #5C6BC0;
+    text-align: center;
+    color: #666666; /* Medium Gray text */
     font-size: 1em;
     font-weight: bold;
 }
 
-.gif-placeholder {
-    /* No specific overrides for now, inherits from .media-placeholder */
-}
-
-.image-placeholder {
-    /* No specific overrides for now, inherits from .media-placeholder */
-}
+.gif-placeholder {}
+.image-placeholder {}
 
 @media (max-width: 768px) {
     .text-center h2 {
